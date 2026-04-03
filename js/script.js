@@ -1,15 +1,28 @@
 
-const toggleBtn = 
-document.getElementById("theme-toggle") ;
-toggleBtn.addEventListener("click" , ()=> {
-    document.body.classList.toggle("dark")
-    
+const toggleBtn = document.getElementById("theme-toggle");
+
+// أول ما الصفحة تفتح → يقرأ من localStorage
+let mode = localStorage.getItem("mode");
+
+if (mode === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀";
+} else {
+    toggleBtn.textContent = "🌙";
+}
+
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
     if (document.body.classList.contains("dark")) {
-        toggleBtn.textContent = "☀"
+        toggleBtn.textContent = "☀";
+        localStorage.setItem("mode", "dark");   
     } else {
-        toggleBtn.textContent = "🌙"
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("mode", "light");  
     }
-})
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("XwfeAiWsju5f_kdpq");
