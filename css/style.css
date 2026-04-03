@@ -239,7 +239,11 @@ body.dark .topbtn{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
-
+.cardA img , .cardB img {
+    width: 100%;
+    clip-path: none;  
+    border-radius: 10px; 
+}
 @media( min-width : 768px)  {
             .cardA img {
                 clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
