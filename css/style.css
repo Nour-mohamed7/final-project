@@ -243,11 +243,11 @@ body.dark .topbtn{
 @media( min-width : 768px)  {
             .cardA img {
                 clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-                width: 100% ;
+                width: 100% !important;
             }
             .cardB img {
         clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
-        width: 100% ;
+        width: 100% !important;
     }
 }
 
