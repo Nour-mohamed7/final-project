@@ -245,6 +245,12 @@ body.dark .topbtn{
     border-radius: 10px; 
 }
 @media( min-width : 768px)  {
+            .cardA {
+                overflow: visible;
+            }
+            .cardB{
+                overflow: visible;
+            }
             .cardA img {
                 clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
                 width: 100% !important;
